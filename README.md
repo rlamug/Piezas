@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/rlamug/Piezas.svg?branch=master)](https://travis-ci.org/rlamug/Piezas)
+
+[![Coverage Status](https://coveralls.io/repos/github/rlamug/Piezas/badge.svg?branch=master)](https://coveralls.io/github/rlamug/Piezas?branch=master)
+
 # Piezas
 
 ## Associated Enumerated Types
