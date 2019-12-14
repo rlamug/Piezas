@@ -48,7 +48,36 @@ TEST(PiezasTest, dropPieceOutOfBoundsGreater) {
   ASSERT_EQ(piezas.dropPiece(4), '?');
 }
 // Drops piece out of bounds in negative
-TEST(PiezasTest,dropPieceOutOfBoundsLess) {
+TEST(PiezasTest, dropPieceOutOfBoundsLess) {
   Piezas piezas;
   ASSERT_EQ(piezas.dropPiece(-1), '?');
+}
+/*** pieceAt Tests ***/
+// Gets empty board piece
+TEST(PiezasTest, pieceAtEmpty) {
+  Piezas piezas;
+  ASSERT_EQ(piezas.pieceAt(0,0), ' ');
+}
+// Gets first moves piece
+TEST(PiezasTest, pieceAtFirstMove) {
+  Piezas piezas;
+  piezas.dropPiece(0)
+  ASSERT_EQ(piezas.pieceAt(0,0), 'X');
+}
+// Gets second moves piece
+TEST(PiezasTest, ) {
+  Piezas piezas;
+  piezas.dropPiece(0);
+  piezas.dropPiece(0);
+  ASSERT_EQ(piezas.pieceAt(1, 0), 'O');
+}
+// Gets out of bounds piece negative
+TEST(PiezasTest, ) {
+  Piezas piezas;
+  ASSERT_EQ(piezas.pieceAt(-1, -1), '?');
+}
+// Gets out of bounds piece positive
+TEST(PiezasTest, ) {
+  Piezas piezas;
+  ASSERT_EQ(piezas.pieceAt(3, 4), '?');
 }
