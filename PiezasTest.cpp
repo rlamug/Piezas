@@ -16,7 +16,31 @@ class PiezasTest : public ::testing::Test {
 // Sanity check
 TEST(PiezasTest, sanityCheck) { ASSERT_TRUE(true); }
 /*** dropPiece Tests ***/
+// Drops piece at row 0 column 0
 TEST(PiezasTest, dropPieceFirstMove) {
   Piezas piezas;
   ASSERT_EQ(piezas.dropPiece(0), 'X');
+}
+// Drops piece at row 0 column 0 twice 
+TEST(PiezasTest, dropPieceSecondMove) {
+  Piezas piezas;
+  piezas.dropPiece(0);
+  piezas.dropPiece(0);
+  ASSERT_EQ(piezas.dropPiece(0), 'O');
+}
+// Drops piece at row 0 column 0 twice 
+TEST(PiezasTest, dropPieceThirddMove) {
+  Piezas piezas;
+  piezas.dropPiece(0);
+  piezas.dropPiece(0);
+  piezas.dropPiece(0);
+  ASSERT_EQ(piezas.dropPiece(0), 'X');
+}
+// Drops piece at row 0 column 0 twice 
+TEST(PiezasTest, dropPieceFourthMove) {
+  Piezas piezas;
+  piezas.dropPiece(0);
+  piezas.dropPiece(0);
+  piezas.dropPiece(0);
+  ASSERT_EQ(piezas.dropPiece(0), '?');
 }
