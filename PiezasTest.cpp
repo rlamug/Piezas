@@ -18,5 +18,5 @@ TEST(PiezasTest, sanityCheck) { ASSERT_TRUE(true); }
 /*** dropPiece Tests ***/
 TEST(PiezasTest, dropPieceFirstMove) {
   Piezas piezas;
-  ASSERT_EQ(piezas.dropPiece(0, 0), 'X');
+  ASSERT_EQ(piezas.dropPiece(0), 'X');
 }
