@@ -67,26 +67,26 @@ TEST(PiezasTest, pieceAtFirstMove) {
   ASSERT_EQ(piezas.pieceAt(0,0), 'X');
 }
 // Gets second moves piece
-TEST(PiezasTest, ) {
+TEST(PiezasTest, pieceAtSecondMove) {
   Piezas piezas;
   piezas.dropPiece(0);
   piezas.dropPiece(0);
   ASSERT_EQ(piezas.pieceAt(1, 0), 'O');
 }
 // Gets out of bounds piece negative
-TEST(PiezasTest, ) {
+TEST(PiezasTest, pieceAtNegativeOutOfBounds) {
   Piezas piezas;
   ASSERT_EQ(piezas.pieceAt(-1, -1), '?');
 }
 // Gets out of bounds piece positive
-TEST(PiezasTest, ) {
+TEST(PiezasTest, pieceAtPositiveOutOfBounds) {
   Piezas piezas;
   ASSERT_EQ(piezas.pieceAt(3, 4), '?');
 }
 
 /*** reset Tests ***/
 // Reset empty board
-TEST(PiezasTest, ) {
+TEST(PiezasTest, resetEmptyBoard) {
   Piezas piezas;
   piezas.reset();
   ASSERT_EQ(piezas.pieceAt(0,0), ' ');
