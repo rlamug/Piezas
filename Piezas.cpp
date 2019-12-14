@@ -94,8 +94,6 @@ Piece Piezas::pieceAt(int row, int column) {
  * line, it is a tie.
  **/
 Piece Piezas::gameState() {
-  int currentPiece;
-  int nextPiece;
   int xScore = 0;
   int oScore = 0;
   // Check if board is filled
@@ -110,11 +108,9 @@ Piece Piezas::gameState() {
   // Check adjacent pieces in each row
   for (int row = 0; row < BOARD_ROWS; row++) {
     for (int column = 0; column < (BOARD_COLS - 1); column++) {
-      currentPiece = pieceAt(row, column);
-      nextPiece = pieceAt(row, column + 1);
       // Update score
-      if (currentPiece == pieceAt(row, column)) {
-        if (currentPiece == X) {
+      if (pieceAt(row, column) == pieceAt(row, column + 1)) {
+        if (pieceAt(row, column) == X) {
           xScore += 1;
         } else {
           oScore += 1;
@@ -125,11 +121,9 @@ Piece Piezas::gameState() {
   // Check adjacent pieces in each column
   for (int column = 0; column < BOARD_COLS; column++) {
     for (int row = 0; row < (BOARD_ROWS - 1); row++) {
-      int currentPiece = pieceAt(row, column);
-      int nextPiece = pieceAt(row + 1, column);
       // Update score
-      if (currentPiece == pieceAt(row, column)) {
-        if (currentPiece == X) {
+      if (pieceAt(row, column) == pieceAt(row + 1, column)) {
+        if (pieceAt(row, column) == X) {
           xScore += 1;
         } else {
           oScore += 1;
