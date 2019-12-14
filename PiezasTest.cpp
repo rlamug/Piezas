@@ -105,3 +105,31 @@ TEST(PiezasTest, resetOutOfBoundsBoard) {
   piezas.reset();
   ASSERT_EQ(piezas.pieceAt(0,0), ' ');
 }
+
+/*** gameState Tests ***/
+// Reset piece placed out of bounds board
+TEST(PiezasTest, gameStateWinnerX) {
+  Piezas piezas;
+  piezas.dropPiece(0); // X turn
+  piezas.dropPiece(1); // O turn
+
+  piezas.dropPiece(0);
+  piezas.dropPiece(1);
+
+  piezas.dropPiece(0);
+  piezas.dropPiece(0);
+
+  piezas.dropPiece(1);
+  piezas.dropPiece(0);
+
+  piezas.dropPiece(2);
+  piezas.dropPiece(0);
+
+  piezas.dropPiece(2);
+  piezas.dropPiece(0);
+
+  piezas.dropPiece(2);
+  piezas.dropPiece(0);
+
+  ASSERT_EQ(piezas.gameState(), 'X');
+}
