@@ -15,6 +15,7 @@ class PiezasTest : public ::testing::Test {
 
 // Sanity check
 TEST(PiezasTest, sanityCheck) { ASSERT_TRUE(true); }
+
 /*** dropPiece Tests ***/
 // Drops piece at row 0 column 0
 TEST(PiezasTest, dropPieceFirstMove) {
@@ -52,6 +53,7 @@ TEST(PiezasTest, dropPieceOutOfBoundsLess) {
   Piezas piezas;
   ASSERT_EQ(piezas.dropPiece(-1), '?');
 }
+
 /*** pieceAt Tests ***/
 // Gets empty board piece
 TEST(PiezasTest, pieceAtEmpty) {
@@ -61,7 +63,7 @@ TEST(PiezasTest, pieceAtEmpty) {
 // Gets first moves piece
 TEST(PiezasTest, pieceAtFirstMove) {
   Piezas piezas;
-  piezas.dropPiece(0)
+  piezas.dropPiece(0);
   ASSERT_EQ(piezas.pieceAt(0,0), 'X');
 }
 // Gets second moves piece
@@ -80,4 +82,12 @@ TEST(PiezasTest, ) {
 TEST(PiezasTest, ) {
   Piezas piezas;
   ASSERT_EQ(piezas.pieceAt(3, 4), '?');
+}
+
+/*** reset Tests ***/
+// Reset empty board
+TEST(PiezasTest, ) {
+  Piezas piezas;
+  piezas.reset();
+  ASSERT_EQ(piezas.pieceAt(0,0), ' ');
 }
