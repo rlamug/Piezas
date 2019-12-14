@@ -110,8 +110,8 @@ Piece Piezas::gameState() {
   // Check adjacent pieces in each row
   for (int row = 0; row < BOARD_ROWS; row++) {
     for (int column = 0; column < (BOARD_COLS - 1); column++) {
-      int currentPiece = pieceAt(row, column);
-      int nextPiece = pieceAt(row, column + 1);
+      currentPiece = pieceAt(row, column);
+      nextPiece = pieceAt(row, column + 1);
       // Update score
       if (currentPiece == pieceAt(row, column)) {
         if (currentPiece == X) {
