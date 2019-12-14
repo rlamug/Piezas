@@ -25,5 +25,5 @@ TEST(PiezasTest, resetDropped) {
   Piezas piezas;
   piezas.dropPiece(0);
   piezas.reset();
-  ASSERT_EQ(piezas.pieceAt(0, 0), 'Blank');
+  ASSERT_EQ(piezas.pieceAt(0, 0), ' ');
 }
