@@ -64,7 +64,7 @@ Piece Piezas::dropPiece(int column) {
   for (int row = 0; row < BOARD_ROWS; row++) {
     // Found open spot to place piece
     if (board[row][column] == Blank) {
-      board[row][column] = turn;
+      board[row][column] = currentTurn;
       return currentTurn;
     }
   }
