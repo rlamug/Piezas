@@ -197,3 +197,22 @@ TEST(PiezasTest, gameStateWinnerTie) {
 
   ASSERT_EQ(piezas.gameState(), ' ');
 }
+// Game just started no winner
+TEST(PiezasTest, gameStateWinnerStart) {
+  Piezas piezas;
+  ASSERT_EQ(piezas.gameState(), '?');
+}
+// In the middle of game
+TEST(PiezasTest, gameStateWinnerMiddle) {
+  Piezas piezas;
+  piezas.dropPiece(0); // X turn
+  piezas.dropPiece(1); // O turn
+
+  piezas.dropPiece(0);
+  piezas.dropPiece(1);
+
+  piezas.dropPiece(0);
+  piezas.dropPiece(1);
+
+  ASSERT_EQ(piezas.gameState(), '?');
+}
