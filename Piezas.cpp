@@ -1,5 +1,6 @@
 #include "Piezas.h"
 #include <vector>
+using std::vector;
 /** CLASS Piezas
  * Class for representing a Piezas vertical board, which is roughly based
  * on the game "Connect Four" where pieces are placed in a column and
@@ -22,12 +23,13 @@
 Piezas::Piezas() {
   turn = X;
   for (int row = 0; row < BOARD_ROWS; row++) {
+    vector<Piece> temp;
     for (int column = 0; column < BOARD_COLS; column++) {
-      board[row][column] = Blank;
+      temp.push_back('Blank');
     }
+    board.push_back(temp);
   }
 }
-
 /**
  * Resets each board location to the Blank Piece value, with a board of the
  * same size as previously specified
