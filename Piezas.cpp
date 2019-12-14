@@ -25,7 +25,7 @@ Piezas::Piezas() {
   for (int row = 0; row < BOARD_ROWS; row++) {
     vector<Piece> temp;
     for (int column = 0; column < BOARD_COLS; column++) {
-      temp.push_back('Blank');
+      temp.push_back(Blank);
     }
     board.push_back(temp);
   }
