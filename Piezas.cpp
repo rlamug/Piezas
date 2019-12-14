@@ -109,8 +109,8 @@ Piece Piezas::gameState() {
   for (int row = 0; row < BOARD_ROWS; row++) {
     for (int column = 0; column < (BOARD_COLS - 1); column++) {
       // Update score
-      if (pieceAt(row, column) == pieceAt(row, column + 1)) {
-        if (pieceAt(row, column) == X) {
+      if (board[row][column] == board[row][column + 1]) {
+        if (board[row][column] == X) {
           xScore += 1;
         } else {
           oScore += 1;
@@ -122,8 +122,8 @@ Piece Piezas::gameState() {
   for (int column = 0; column < BOARD_COLS; column++) {
     for (int row = 0; row < (BOARD_ROWS - 1); row++) {
       // Update score
-      if (pieceAt(row, column) == pieceAt(row + 1, column)) {
-        if (pieceAt(row, column) == X) {
+      if (board[row][column] == board[row + 1][column]) {
+        if (board[row][column] == X) {
           xScore += 1;
         } else {
           oScore += 1;
