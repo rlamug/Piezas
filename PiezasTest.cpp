@@ -27,18 +27,28 @@ TEST(PiezasTest, dropPieceSecondMove) {
   piezas.dropPiece(0);
   ASSERT_EQ(piezas.dropPiece(0), 'O');
 }
-// Drops piece at row 0 column 0 twice 
+// Drops piece at row 0 column 0 three 
 TEST(PiezasTest, dropPieceThirddMove) {
   Piezas piezas;
   piezas.dropPiece(0);
   piezas.dropPiece(0);
   ASSERT_EQ(piezas.dropPiece(0), 'X');
 }
-// Drops piece at row 0 column 0 twice 
+// Drops piece at full column 
 TEST(PiezasTest, dropPieceFourthMove) {
   Piezas piezas;
   piezas.dropPiece(0);
   piezas.dropPiece(0);
   piezas.dropPiece(0);
-  ASSERT_EQ(piezas.dropPiece(0), '?');
+  ASSERT_EQ(piezas.dropPiece(0), ' ');
+}
+// Drops piece out of bounds greater than amount of columns
+TEST(PiezasTest, dropPieceOutOfBoundsGreater) {
+  Piezas piezas;
+  ASSERT_EQ(piezas.dropPiece(4), '?');
+}
+// Drops piece out of bounds in negative
+TEST(PiezasTest,dropPieceOutOfBoundsLess) {
+  Piezas piezas;
+  ASSERT_EQ(piezas.dropPiece(-1), '?');
 }
