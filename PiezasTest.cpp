@@ -18,11 +18,7 @@ TEST(PiezasTest, sanityCheck) { ASSERT_TRUE(true); }
 /*** reset ***/
 TEST(PiezasTest, resetFilled) {
   Piezas piezas;
-  for (int row = 0; row < BOARD_ROWS; row++) {
-    for (int column = 0; column < BOARD_COLS; column++) {
-      piezas.board[row][column] = X;
-    }
-  }
+  piezas.dropPiece(0);
   ASSERT_EQ(piezas.pieceAt(0, 0), 'X');
 }
 TEST(PiezasTest, resetDropped) {
