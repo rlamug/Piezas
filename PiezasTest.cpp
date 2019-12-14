@@ -172,7 +172,7 @@ TEST(PiezasTest, gameStateWinnerO) {
   piezas.dropPiece(0);
   piezas.dropPiece(3);
 
-  ASSERT_EQ(piezas.gameState(), 'X');
+  ASSERT_EQ(piezas.gameState(), 'O');
 }
 // Tie
 TEST(PiezasTest, gameStateWinnerTie) {
