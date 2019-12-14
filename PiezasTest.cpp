@@ -23,8 +23,7 @@ TEST(PiezasTest, resetFilled) {
       piezas.board[row][column] = X;
     }
   }
-  piezas.reset();
-  ASSERT_EQ(board[0][0], 'Blank');
+  ASSERT_EQ(piezas.pieceAt(0, 0), 'X');
 }
 TEST(PiezasTest, resetDropped) {
   Piezas piezas;
