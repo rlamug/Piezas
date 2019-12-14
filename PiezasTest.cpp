@@ -25,13 +25,11 @@ TEST(PiezasTest, dropPieceFirstMove) {
 TEST(PiezasTest, dropPieceSecondMove) {
   Piezas piezas;
   piezas.dropPiece(0);
-  piezas.dropPiece(0);
   ASSERT_EQ(piezas.dropPiece(0), 'O');
 }
 // Drops piece at row 0 column 0 twice 
 TEST(PiezasTest, dropPieceThirddMove) {
   Piezas piezas;
-  piezas.dropPiece(0);
   piezas.dropPiece(0);
   piezas.dropPiece(0);
   ASSERT_EQ(piezas.dropPiece(0), 'X');
