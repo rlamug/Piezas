@@ -15,9 +15,8 @@ class PiezasTest : public ::testing::Test {
 
 // Sanity check
 TEST(PiezasTest, sanityCheck) { ASSERT_TRUE(true); }
-/*** reset ***/
-TEST(PiezasTest, resetFilled) {
+/*** dropPiece Tests ***/
+TEST(PiezasTest, dropPieceFirstMove) {
   Piezas piezas;
-  piezas.dropPiece(0);
-  ASSERT_EQ(piezas.pieceAt(0, 0), 'X');
+  ASSERT_EQ(piezas.dropPiece(0, 0), 'X');
 }
