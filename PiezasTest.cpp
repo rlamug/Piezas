@@ -186,14 +186,14 @@ TEST(PiezasTest, gameStateWinnerTie) {
   piezas.dropPiece(0);
   piezas.dropPiece(1);
 
-  piezas.dropPiece(3);
   piezas.dropPiece(2);
+  piezas.dropPiece(3);
 
-  piezas.dropPiece(3);
   piezas.dropPiece(2);
+  piezas.dropPiece(3);
 
-  piezas.dropPiece(3);
   piezas.dropPiece(2);
+  piezas.dropPiece(3);
 
   ASSERT_EQ(piezas.gameState(), ' ');
 }
