@@ -91,3 +91,17 @@ TEST(PiezasTest, resetEmptyBoard) {
   piezas.reset();
   ASSERT_EQ(piezas.pieceAt(0,0), ' ');
 }
+// Reset one pieced placed board
+TEST(PiezasTest, resetOnePieceBoard) {
+  Piezas piezas;
+  piezas.dropPiece(0)
+  piezas.reset();
+  ASSERT_EQ(piezas.pieceAt(0,0), ' ');
+}
+// Reset piece placed out of bounds board
+TEST(PiezasTest, resetOutOfBoundsBoard) {
+  Piezas piezas;
+  piezas.dropPiece(10)
+  piezas.reset();
+  ASSERT_EQ(piezas.pieceAt(0,0), ' ');
+}
