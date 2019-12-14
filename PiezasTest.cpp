@@ -131,5 +131,14 @@ TEST(PiezasTest, gameStateWinnerX) {
   piezas.dropPiece(2);
   piezas.dropPiece(0);
 
+  piezas.dropPiece(3);
+  piezas.dropPiece(0);
+
+  piezas.dropPiece(3);
+  piezas.dropPiece(0);
+
+  piezas.dropPiece(3);
+  piezas.dropPiece(0);
+
   ASSERT_EQ(piezas.gameState(), 'X');
 }
