@@ -16,7 +16,7 @@ class PiezasTest : public ::testing::Test {
 // Sanity check
 TEST(PiezasTest, sanityCheck) { ASSERT_TRUE(true); }
 /*** reset ***/
-TEST(PiezasTest, reset) {
+TEST(PiezasTest, resetFilled) {
   Piezas piezas;
   for (int row = 0; row < BOARD_ROWS; row++) {
     for (int column = 0; column < BOARD_COLS; column++) {
@@ -25,4 +25,10 @@ TEST(PiezasTest, reset) {
   }
   piezas.reset();
   ASSERT_EQ(board[0][0], 'Blank');
+}
+TEST(PiezasTest, resetDropped) {
+  Piezas piezas;
+  piezas.dropPiece(0);
+  piezas.reset();
+  ASSERT_EQ(piezas.pieceAt(0, 0), 'Blank');
 }
