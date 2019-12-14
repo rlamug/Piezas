@@ -174,3 +174,26 @@ TEST(PiezasTest, gameStateWinnerO) {
 
   ASSERT_EQ(piezas.gameState(), 'X');
 }
+// Tie
+TEST(PiezasTest, gameStateWinnerTie) {
+  Piezas piezas;
+  piezas.dropPiece(0); // X turn
+  piezas.dropPiece(1); // O turn
+
+  piezas.dropPiece(0);
+  piezas.dropPiece(1);
+
+  piezas.dropPiece(0);
+  piezas.dropPiece(1);
+
+  piezas.dropPiece(3);
+  piezas.dropPiece(2);
+
+  piezas.dropPiece(3);
+  piezas.dropPiece(2);
+
+  piezas.dropPiece(3);
+  piezas.dropPiece(2);
+
+  ASSERT_EQ(piezas.gameState(), ' ');
+}
