@@ -49,6 +49,7 @@ void Piezas::reset() {
  * Trying to drop a piece where it cannot be placed loses the player's turn
  **/
 Piece Piezas::dropPiece(int column) {
+  Piece currentTurn = turn;
   // Toggle turn
   if (turn == X) {
     turn = O;
@@ -64,7 +65,7 @@ Piece Piezas::dropPiece(int column) {
     // Found open spot to place piece
     if (board[row][column] == Blank) {
       board[row][column] = turn;
-      return turn;
+      return currentTurn;
     }
   }
   // Column is full
